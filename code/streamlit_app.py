@@ -19,7 +19,7 @@ tts.write_to_fp(audio_bytes)
 audio_bytes.seek(0)
 
 st.title("Hindi Pronunciation Practice")
-st.write("Please listen carefully to this pronunciation :woman_teacher:")
+st.write("Please listen carefully to this pronunciation :female_teacher:")
 st.audio(audio_bytes, format='audio/mpeg')
 
 # Apply CSS
