@@ -34,14 +34,10 @@ selected_topic = st.selectbox("Select a Topic :one:", list(hindi_words_by_topic.
 # Initialize session state for target_word and recognized_word
 if 'target_word' not in st.session_state:
     st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
-if 'recognized_word' not in st.session_state:
-    st.session_state.recognized_word = None
 
 # Button to change the target word
 if st.button("Change Word", use_container_width=True):
     st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
-    st.session_state.recognized_word = None  # Reset recognized word
-    st.write("Changed word. Reset recognized_word to None.")  # Debug statement
 
 # Generate audio (speech) for the selected text
 tts = gTTS(text=st.session_state.target_word, lang='hi')
@@ -89,10 +85,6 @@ recognized_word = speech_to_text(
 
 # Update session state with recognized word
 if recognized_word:
-    st.session_state.recognized_word = recognized_word
-
-# Display recognized word and feedback only after the user has spoken
-if st.session_state.recognized_word:
     # Log the target and response words for debugging
     st.write(f"Target word: {st.session_state.target_word}")
     st.write(f"Recognized word: {st.session_state.recognized_word}")
