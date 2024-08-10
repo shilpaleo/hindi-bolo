@@ -36,7 +36,7 @@ if 'target_word' not in st.session_state:
     st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
 
 # Button to change the target word
-if st.button("Change Word", use_container_width=True):
+if st.button("Change Word", use_container_width=True, type='primary'):
     st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
 
 # Generate audio (speech) for the selected text
