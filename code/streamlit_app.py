@@ -31,7 +31,7 @@ st.markdown('''
     h1 {
         color: black;
     }
-    div.stText {
+    div.stApp {
         color: black;
     }
 </style>
