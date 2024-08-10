@@ -15,7 +15,7 @@ audio_bytes.seek(0)
 
 st.title("Hindi Pronunciation Practice")
 st.text("Please try to pronounce the following:")
-st.audio(audio_bytes, format='audio/mp3')
+st.audio(audio_bytes, format='audio/mpeg')
 
 recognized_word = speech_to_text(
     language='hi',
