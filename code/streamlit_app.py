@@ -35,6 +35,10 @@ selected_topic = st.selectbox("Select a Topic :one:", list(hindi_words_by_topic.
 if 'target_word' not in st.session_state:
     st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
 
+# Button to change the target word
+if st.button("Play Word"):
+    st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
+
 # Generate audio (speech) for the selected text
 tts = gTTS(text=st.session_state.target_word, lang='hi')
 
