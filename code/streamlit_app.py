@@ -35,6 +35,7 @@ selected_topic = st.selectbox("Select a Topic :one:", list(hindi_words_by_topic.
 if 'target_word' not in st.session_state:
     st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
 
+st.write("Next, click the button below to change to a new word! :radio_button:")
 # Button to change the target word
 if st.button("Change Word", use_container_width=True, type='primary'):
     st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
@@ -48,7 +49,7 @@ tts.write_to_fp(audio_bytes)
 audio_bytes.seek(0)
 
 # Play target pronunciation
-st.write("Please listen carefully to this pronunciation :female-teacher:")
+st.write("Please listen carefully to the pronunciation :female-teacher:")
 st.audio(audio_bytes, format='audio/mpeg')
 
 # Apply CSS
@@ -98,7 +99,7 @@ if recognized_word:
 
     # Perform comparison target vs response for feedback
     if recognized_word == st.session_state.target_word:
-        st.text(f"Great job! You pronounced {recognized_word} correctly.")
+        st.write(f"Great job! You pronounced {recognized_word} correctly.")
         st.balloons()
     else:
-        st.text("Hmm, that wasn't quite right. Let's try again.")
+        st.write("Hmm, that wasn't quite right. Let's try again.")
