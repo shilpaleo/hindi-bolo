@@ -4,6 +4,12 @@ import streamlit as st
 from gtts import gTTS
 from streamlit_mic_recorder import speech_to_text
 
+st.set_page_config(
+        page_title="Hindi Bolo",
+        page_icon="🦄",
+        layout="wide",
+    )
+
 target_word = "नमस्ते"  # Example target word
 
 tts = gTTS(text=target_word, lang='hi')
