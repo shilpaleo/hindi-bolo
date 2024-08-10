@@ -6,8 +6,7 @@ from streamlit_mic_recorder import speech_to_text
 
 st.set_page_config(
         page_title="Hindi Bolo",
-        page_icon="🦄",
-        layout="wide",
+        page_icon="🦄"
     )
 
 target_word = "नमस्ते"  # Example target word
