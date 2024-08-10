@@ -31,11 +31,12 @@ hindi_words_by_topic = {
 # Select a topic
 selected_topic = st.selectbox("Select a Topic :one:", list(hindi_words_by_topic.keys()))
 
-# Randomly select a word from the selected topic
-target_word = random.choice(hindi_words_by_topic[selected_topic])
+# Initialize session state for target_word
+if 'target_word' not in st.session_state:
+    st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
 
 # Generate audio (speech) for the selected text
-tts = gTTS(text=target_word, lang='hi')
+tts = gTTS(text=st.session_state.target_word, lang='hi')
 
 # Convert gTTS object to byte stream
 audio_bytes = BytesIO()
@@ -79,12 +80,12 @@ recognized_word = speech_to_text(
 )
 
 # Log the target and response words for debugging
-st.write(f"Target word: {target_word}")
+st.write(f"Target word: {st.session_state.target_word}")
 st.write(f"Recognized word: {recognized_word}")
 
 # Perform comparison target vs response for feedback
 if recognized_word:
-    if recognized_word == target_word:
+    if recognized_word == st.session_state.target_word:
         st.text(f"Great job! You pronounced {recognized_word} correctly.")
         st.balloons()
     else:
