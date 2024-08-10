@@ -28,6 +28,9 @@ st.markdown('''
     .stApp {
         background-color: #FFB6C1;
     }
+    .stTitle, .stText {
+        color: black;
+    }
 </style>
 ''', unsafe_allow_html=True)
 
