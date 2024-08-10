@@ -58,6 +58,9 @@ st.markdown('''
     div.stApp {
         color: black;
     }
+    p {
+        color: black;
+    }
 </style>
 ''', unsafe_allow_html=True)
 
