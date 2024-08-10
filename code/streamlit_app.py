@@ -34,9 +34,6 @@ st.markdown('''
     div.stApp {
         color: black;
     }
-    div.stApp {
-        font-size: 20px;
-    }
 </style>
 ''', unsafe_allow_html=True)
 
