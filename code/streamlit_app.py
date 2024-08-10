@@ -62,6 +62,9 @@ st.markdown('''
     h1 {
         color: black;
     }
+    h3 {
+        color: black;
+    }
     div.stApp {
         color: black;
     }
