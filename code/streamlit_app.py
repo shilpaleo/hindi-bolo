@@ -55,7 +55,7 @@ st.audio(audio_bytes, format='audio/mpeg')
 st.markdown('''
 <style>
     .stApp {
-        background-color: #FFB6C1;
+        background-color: #ffd1d8;
     }
     h1 {
         color: black;
@@ -65,6 +65,13 @@ st.markdown('''
     }
     p {
         color: black;
+    }    
+    .stButton>button {
+        background-color: #B6FFF4 !important;
+        border: none !important;
+    }
+    .stButton>button:hover {
+        border: 1px solid #000000 !important;
     }
 </style>
 ''', unsafe_allow_html=True)
