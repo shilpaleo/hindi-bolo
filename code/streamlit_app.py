@@ -91,7 +91,7 @@ if recognized_word:
 
     # Perform comparison target vs response for feedback
     if recognized_word == st.session_state.target_word:
-        st.text(f"Great job! You pronounced {st.session_state.recognized_word} correctly.")
+        st.text(f"Great job! You pronounced {recognized_word} correctly.")
         st.balloons()
     else:
         st.text("Hmm, that wasn't quite right. Let's try again.")
