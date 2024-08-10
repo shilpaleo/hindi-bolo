@@ -17,14 +17,21 @@ st.title("Hindi Pronunciation Practice")
 st.text("Please try to pronounce the following:")
 st.audio(audio_bytes, format='audio/mpeg')
 
-# Apply the CSS for background color
-st.markdown("""
-    <style>
+st.markdown('''
+<style>
     .stApp {
         background-color: #FFB6C1;
     }
-    </style>
-    """, unsafe_allow_html=True)
+    .stButton button {
+        width: auto;
+        display: inline-block;
+        background-color: #333; /* Matching the button background color */
+        color: white;
+        padding: 0.5em 1em;  /* Adjust padding to control button size */
+        border-radius: 5px;  /* Optional: make the button slightly rounded */
+    }
+</style>
+''', unsafe_allow_html=True)
 
 recognized_word = speech_to_text(
     language='hi',
