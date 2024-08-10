@@ -11,14 +11,15 @@ st.set_page_config(
         page_icon="🦄"
     )
 
-# Set Streamlit app Title
+# Set Streamlit app Title & Header
 st.title("Hindi Pronunciation Practice")
+st.subheader("Let's have fun with Hindi words! :microphone:", divider=True)
 
 # Dictionary of Hindi words categorized by topics
 hindi_words_by_topic = {
     "Greetings": ["नमस्ते", "धन्यवाद", "शुभकामनाएं", "अलविदा", "स्वागत है", "जन्मदिन मुबारक", "कृपया"],
     "Family": ["माँ", "पिता", "भाई", "बहन", "दादी", "दादा", "नानी", "नाना", "चाचा", "चाची"],
-    "Animals/Birds": ["कुत्ता", "बिल्ली", "गाय", "घोड़ा", "हाथी", "शेर", "मोर", "तोता", "कौआ", "चिड़िया"],
+    "Animals/Birds": ['खरगोश', "कुत्ता", "बिल्ली", "गाय", "घोड़ा", "हाथी", "शेर", "मोर", "तोता", "कौआ", "चिड़िया"],
     "Fruits/Vegetables": ["सेब", "केला", "आम", "संतरा", "गाजर", "टमाटर", "आलू", "प्याज", "मटर", "भिंडी"],
     "Actions": ["खाना", "पीना", "सोना", "उठना", "चलना", "दौड़ना", "कूदना", "बैठना", "पढ़ना", "लिखना"],
     "Places": ["स्कूल", "घर", "बाजार", "पार्क", "मंदिर", "मस्जिद", "चर्च", "हॉस्पिटल", "पुस्तकालय", "पार्क"],
@@ -29,7 +30,7 @@ hindi_words_by_topic = {
 }
 
 # Select a topic
-selected_topic = st.selectbox("Select a Topic :one:", list(hindi_words_by_topic.keys()))
+selected_topic = st.selectbox("First, Select a Topic :one:", list(hindi_words_by_topic.keys()))
 
 # Initialize session state for target_word and recognized_word
 if 'target_word' not in st.session_state:
@@ -66,6 +67,7 @@ st.markdown('''
     }
     p {
         color: black;
+        font-size: 20px !important;
     }    
     .stButton>button {
         background-color: #B6FFF4 !important;
