@@ -22,13 +22,13 @@ st.title("Hindi Pronunciation Practice")
 st.text("Please try to pronounce the following:")
 st.audio(audio_bytes, format='audio/mpeg')
 
-# Apply the CSS for background color and targeted button width
+# Apply CSS
 st.markdown('''
 <style>
     .stApp {
         background-color: #FFB6C1;
     }
-    .stTitle, .stText {
+    .css-10trblm, .css-1v3fvcr {
         color: black;
     }
 </style>
