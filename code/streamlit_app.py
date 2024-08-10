@@ -20,10 +20,7 @@ st.audio(audio_bytes, format='audio/mpeg')
 # Apply the CSS for background color
 st.markdown("""
     <style>
-    .css-1d391kg {  # This targets the main container
-        background-color: #FFB6C1;
-    }
-    .css-1v3fvcr {  # This targets the sidebar
+    .stApp {
         background-color: #FFB6C1;
     }
     </style>
