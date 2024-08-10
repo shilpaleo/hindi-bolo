@@ -41,6 +41,7 @@ if 'recognized_word' not in st.session_state:
 if st.button("Change Word", use_container_width=True):
     st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
     st.session_state.recognized_word = None  # Reset recognized word
+    st.write("Changed word. Reset recognized_word to None.")  # Debug statement
 
 # Generate audio (speech) for the selected text
 tts = gTTS(text=st.session_state.target_word, lang='hi')
