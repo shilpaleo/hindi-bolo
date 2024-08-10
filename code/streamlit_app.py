@@ -87,7 +87,7 @@ recognized_word = speech_to_text(
 if recognized_word:
     # Log the target and response words for debugging
     st.write(f"Target word: {st.session_state.target_word}")
-    st.write(f"Recognized word: {st.session_state.recognized_word}")
+    st.write(f"Recognized word: {recognized_word}")
 
     # Perform comparison target vs response for feedback
     if st.session_state.recognized_word == st.session_state.target_word:
