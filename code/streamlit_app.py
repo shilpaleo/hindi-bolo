@@ -19,7 +19,7 @@ tts.write_to_fp(audio_bytes)
 audio_bytes.seek(0)
 
 st.title("Hindi Pronunciation Practice")
-st.text("Please try to pronounce the following:")
+st.write("Please listen carefully to this pronunciation: :woman_teacher:")
 st.audio(audio_bytes, format='audio/mpeg')
 
 # Apply CSS
@@ -37,7 +37,7 @@ st.markdown('''
 </style>
 ''', unsafe_allow_html=True)
 
-st.text("Now record your pronunciation of what you heard:")
+st.write("Now, record your pronunciation of what you heard: :speaking_head:")
 recognized_word = speech_to_text(
     language='hi',
     start_prompt="Start recording",
