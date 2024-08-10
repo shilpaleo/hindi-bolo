@@ -23,21 +23,8 @@ st.markdown('''
     .stApp {
         background-color: #FFB6C1;
     }
-    .custom-button {
-        width: auto;
-        display: inline-block;
-        background-color: #333;
-        color: white;
-        padding: 0.5em 1em;
-        border-radius: 5px;
-        text-align: center;
-        margin: 0 auto;
-    }
 </style>
 ''', unsafe_allow_html=True)
-
-# Wrap the button in a div with a custom class
-st.markdown('<div class="custom-button">', unsafe_allow_html=True)
 
 recognized_word = speech_to_text(
     language='hi',
@@ -50,8 +37,6 @@ recognized_word = speech_to_text(
     kwargs={},
     key=None  # No unique key needed
 )
-
-st.markdown('</div>', unsafe_allow_html=True)
 
 if recognized_word:
     if recognized_word == target_word:
