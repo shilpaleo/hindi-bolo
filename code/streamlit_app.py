@@ -29,7 +29,7 @@ hindi_words_by_topic = {
 }
 
 # Select a topic
-selected_topic = st.selectbox("Select a Topic", list(hindi_words_by_topic.keys()))
+selected_topic = st.selectbox("Select a Topic", list(hindi_words_by_topic.keys()), placeholder="Choose any one")
 
 # Randomly select a word from the selected topic
 target_word = random.choice(hindi_words_by_topic[selected_topic])
