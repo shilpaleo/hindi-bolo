@@ -23,6 +23,9 @@ st.markdown('''
     .stApp {
         background-color: #FFB6C1;
     }
+    .stAudio {
+        background-color: black;
+    }
 </style>
 ''', unsafe_allow_html=True)
 
