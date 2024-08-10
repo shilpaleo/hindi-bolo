@@ -16,13 +16,15 @@ audio_bytes.seek(0)
 st.title("Hindi Pronunciation Practice")
 st.text("Please try to pronounce the following:")
 st.audio(audio_bytes, format='audio/mpeg')
+
+# Apply the CSS for background color
 st.markdown("""
     <style>
-    .reportview-container {
-        background: #FFB6C1;
+    .css-1d391kg {  # This targets the main container
+        background-color: #FFB6C1;
     }
-    .sidebar .sidebar-content {
-        background: #FFB6C1;
+    .css-1v3fvcr {  # This targets the sidebar
+        background-color: #FFB6C1;
     }
     </style>
     """, unsafe_allow_html=True)
