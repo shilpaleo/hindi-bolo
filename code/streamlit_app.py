@@ -28,7 +28,10 @@ st.markdown('''
     .stApp {
         background-color: #FFB6C1;
     }
-    .css-10trblm, .css-1v3fvcr {
+    h1 {
+        color: black;
+    }
+    p {
         color: black;
     }
 </style>
