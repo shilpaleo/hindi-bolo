@@ -37,6 +37,7 @@ st.markdown('''
 </style>
 ''', unsafe_allow_html=True)
 
+st.text("Now record your pronunciation of what you heard:")
 recognized_word = speech_to_text(
     language='hi',
     start_prompt="Start recording",
