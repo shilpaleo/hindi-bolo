@@ -1,9 +1,9 @@
 :woman_teacher: 
-# hindi-bolo (translates to: speak hindi)
+# hindi-pronunciation
 This started as an idea where I wanted to create a fun and engaging way for my toddler to boost confidence in speaking the Indian language, Hindi. 
 I prompted ChatGPT for ideas. I suggested building something using Python, starting simple, which can be scaled and enhanced later. 
 The simple `Streamlit` app currently does the following:
-  - Dynamically takes a set of pre-defined target words from a selected topic
+  - Takes a pre-defined target word (currently pre-set to the basic Hindi greeting: "नमस्ते")
   - Uses Google's text-to-speech (gTTS) to take the target word and covert to audio
   - That audio is played as an input for children to listen to the "proper/target" pronunciation
   - Then, record their way of pronouncing the same target word - which undergoes speech-to-text transformation (Streamlit Mic Recorder with Google API)

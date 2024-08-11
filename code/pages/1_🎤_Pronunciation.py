@@ -7,8 +7,23 @@ from streamlit_mic_recorder import speech_to_text
 
 # Set Streamlit app page configurations - Icon & URL Display
 st.set_page_config(
-        page_title="Hindi Bolo",
-        page_icon="🦄"
+        page_title="Pronunciation Practise",
+        page_icon=":microphone:"
+    )
+
+# Set Streamlit sidebar contents
+with st.sidebar:
+    st.header("Nail your Hindi pronunciation! :left_speech_bubble:")
+    st.markdown("""
+    Code on [Github]()
+                
+    Here's how this game is designed:
+    1. Dynamically takes a set of pre-defined target words from a selected topic
+    2. Uses Google's text-to-speech (gTTS) to take the target word and covert to audio
+    3. That audio is played as an input for children to listen to the "proper/target" pronunciation
+    4. Then, record their way of pronouncing the same target word - which undergoes speech-to-text transformation (Streamlit Mic Recorder with Google API)
+    5. Both target and response words are compared, and a celebratory or encouraging try-again message is finally displayed to prompt further practice!        
+    """
     )
 
 # Set Streamlit app Title & Header
@@ -28,18 +43,20 @@ hindi_words_by_topic = {
     "Numbers": ["एक", "दो", "तीन", "चार", "पाँच", "छह", "सात", "आठ", "नौ", "दस"],
     "Colors": ["लाल", "नीला", "हरा", "पीला", "काला", "सफेद", "गुलाबी", "बैंगनी", "भूरा", "नारंगी"]
 }
-
-# Select a topic
-selected_topic = st.selectbox("First, Select a Topic :one:", list(hindi_words_by_topic.keys()))
+st.write("Select a topic and click change word button :radio_button:")
+col1, col2 = st.columns(2)
+with col1:
+    # Select a topic
+    selected_topic = st.selectbox(label='topic selection',options=list(hindi_words_by_topic.keys()), label_visibility='collapsed')
 
 # Initialize session state for target_word and recognized_word
 if 'target_word' not in st.session_state:
     st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
 
-st.write("Next, click the button below to change to a new word! :radio_button:")
-# Button to change the target word
-if st.button("Change Word", use_container_width=True, type='primary'):
-    st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
+with col2:
+    # Button to change the target word
+    if st.button("Change Word", use_container_width=True):
+        st.session_state.target_word = random.choice(hindi_words_by_topic[selected_topic])
 
 # Generate audio (speech) for the selected text
 tts = gTTS(text=st.session_state.target_word, lang='hi')
@@ -90,7 +107,7 @@ recognized_word = speech_to_text(
     callback=None,
     args=(),
     kwargs={},
-    key=None  # No unique key needed
+    key=None  
 )
 
 # Update session state with recognized word
