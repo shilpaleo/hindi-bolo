@@ -65,9 +65,6 @@ st.markdown('''
     h3 {
         color: black;
     }
-    div.stApp {
-        color: black;
-    }
     p {
         color: black;
         font-size: 20px !important;
