@@ -23,6 +23,6 @@ st.markdown(
 
     ### Have feedback or ideas to make this better? :writing_hand:
     - Connect on [LinkedIn](https://www.linkedin.com/in/shilpa-sindhe/)
-    - Find my code on [Github](https://github.com/shilpaleo)
+    - Find my code on [Github](https://github.com/shilpaleo/hindi-bolo)
 """
 )
