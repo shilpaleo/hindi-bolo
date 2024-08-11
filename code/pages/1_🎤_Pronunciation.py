@@ -15,7 +15,7 @@ st.set_page_config(
 with st.sidebar:
     st.header("Nail your Hindi pronunciation! :left_speech_bubble:")
     st.markdown("""
-    Code on [Github]()
+    Code on [Github](https://github.com/shilpaleo/hindi-bolo/blob/main/code/pages/1_%F0%9F%8E%A4_Pronunciation.py)
                 
     Here's how this game is designed:
     1. Dynamically takes a set of pre-defined target words from a selected topic
