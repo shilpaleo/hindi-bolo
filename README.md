@@ -1,5 +1,5 @@
 :woman_teacher: 
-# hindi-pronunciation
+# hindi-bolo (translates to: speak hindi)
 This started as an idea where I wanted to create a fun and engaging way for my toddler to boost confidence in speaking the Indian language, Hindi. 
 I prompted ChatGPT for ideas. I suggested building something using Python, starting simple, which can be scaled and enhanced later. 
 The simple `Streamlit` app currently does the following:
