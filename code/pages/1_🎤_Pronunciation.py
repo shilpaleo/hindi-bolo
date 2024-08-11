@@ -8,7 +8,7 @@ from streamlit_mic_recorder import speech_to_text
 # Set Streamlit app page configurations - Icon & URL Display
 st.set_page_config(
         page_title="Pronunciation Practise",
-        page_icon=":microphone:"
+        page_icon="🎤"
     )
 
 # Set Streamlit sidebar contents
@@ -27,8 +27,8 @@ with st.sidebar:
     )
 
 # Set Streamlit app Title & Header
-st.title("Hindi Pronunciation Practice")
-st.subheader("Let's have fun with Hindi words! :microphone:", divider=True)
+st.title("Hindi Pronunciation")
+st.subheader("Fun with Hindi words! :microphone:", divider=True)
 
 # Dictionary of Hindi words categorized by topics
 hindi_words_by_topic = {
