@@ -52,12 +52,7 @@ st.markdown('''
     }
     .stButton>button:hover {
         border: 1px solid #000000 !important;
-    }
-    .st-bq {
-        height: 50px;
-        line-height: 50px;
-        padding: 0px;
-    }        
+    }     
 </style>
 ''', unsafe_allow_html=True)
 
