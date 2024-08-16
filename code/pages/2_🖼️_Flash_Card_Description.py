@@ -56,7 +56,7 @@ st.markdown('''
     .st-c8 {
         height: 80px;
         line-height: 60px;
-        padding: 1px;
+        padding: 0px;
     }        
 </style>
 ''', unsafe_allow_html=True)
