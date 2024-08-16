@@ -20,7 +20,7 @@ st.set_page_config(
 with st.sidebar:
     st.header("Flashcard Hindi description! :left_speech_bubble:")
     st.markdown("""
-    Code on [Github]()
+    Code on [Github](https://github.com/shilpaleo/hindi-bolo/blob/main/code/pages/2_%F0%9F%96%BC%EF%B8%8F_Flash_Card_Description.py)
                 
     Here's how this game is designed:
     1. Dynamically takes a set of pre-reviewed child-safe images from a selected topic
