@@ -8,7 +8,7 @@ from PIL import Image
 approved_images_dir = os.path.join(os.path.dirname(__file__), '../approved_images')
 
 # Define the topics based on sub-folders in the approved_images directory
-topics = [folder for folder in os.listdir(approved_images_dir) if os.path.isdir(os.path.join(approved_images_dir, folder))]
+topics = os.listdir(approved_images_dir)
 
 # Set Streamlit app page configurations - Icon & URL Display
 st.set_page_config(
@@ -56,7 +56,14 @@ st.markdown('''
 </style>
 ''', unsafe_allow_html=True)
 
-st.write("Select a topic and click change image button :radio_button:")
+# Define instructions for activity
+st.write('''
+:one: Select a topic from the dropdown first.<br>
+:two: Once you're done answering the questions, <br>
+Click Change Picture button for a new picture! :arrow_down_small:
+''', unsafe_allow_html=True)
+
+# Format topic selection and image change button
 col1, col2 = st.columns(2)
 with col1:
     # Dropdown for topic selection
@@ -77,7 +84,7 @@ if selected_topic:
 
     # Always show the "Change Image" button
     with col2:
-        change_image_clicked = st.button("Change Image")
+        change_image_clicked = st.button("Change Picture")
 
     if images:
         # Initialize or update session state to store the selected image
@@ -85,8 +92,8 @@ if selected_topic:
             st.session_state.selected_image = random.choice(images)
 
         # Get the selected image from session state
-        selected_image = st.session_state.selected_image
-        image_path = os.path.join(topic_folder, selected_image)
+        #selected_image = st.session_state.selected_image
+        image_path = os.path.join(topic_folder, st.session_state.selected_image)
 
         # Display the image
         image = Image.open(image_path)
@@ -95,11 +102,11 @@ if selected_topic:
         st.subheader("Describe the picture! :microphone:", divider=True)
 
         # Display Hindi questions with English translations inside expanders
-        with st.expander("1) यह कौन सा चित्र है?"):
+        with st.expander(":question: यह कौन सा चित्र है?"):
             st.write("What picture is this?")
 
-        with st.expander("2) इस चित्र का रंग क्या है?"):
+        with st.expander(":rainbow: इस चित्र का रंग क्या है?"):
             st.write("What color is the picture?")
 
-        with st.expander("3) इस चित्र के बारे में कुछ कहो।"):
+        with st.expander(":loud_sound: इस चित्र के बारे में कुछ कहो।"):
             st.write("Say something about this picture.")
