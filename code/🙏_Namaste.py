@@ -18,7 +18,7 @@ st.markdown(
     ### What activities can you find here today? :open_book:
     (:point_left: Select from the sidebar to your left)
     - Pronunciation practise :microphone:
-    - Flash card description practise :frame_with_picture: _(development ongoing..:hammer:)_
+    - Flash card description practise :frame_with_picture: 
     - More to come..:mega:
 
     ### Have feedback or ideas to make this better? :writing_hand:
