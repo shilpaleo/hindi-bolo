@@ -54,7 +54,7 @@ st.markdown('''
         border: 1px solid #000000 !important;
     }
     .st-c8 {
-        height: 80px;
+        height: 60px;
         line-height: 60px;
         padding: 0px;
     }        
