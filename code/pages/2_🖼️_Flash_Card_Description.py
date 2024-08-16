@@ -55,7 +55,7 @@ st.markdown('''
     }
     # .st-bq {
     #     height: 80px;
-    #     line-height: 20px;
+    #     line-height: 60px;
     #     padding: 1px;
     # }        
 </style>
