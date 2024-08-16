@@ -54,7 +54,7 @@ st.markdown('''
         border: 1px solid #000000 !important;
     }
     # .st-bq {
-    #     height: 20px;
+    #     height: 80px;
     #     line-height: 20px;
     #     padding: 1px;
     # }        
