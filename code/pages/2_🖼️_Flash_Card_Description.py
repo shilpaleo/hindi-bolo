@@ -53,7 +53,7 @@ st.markdown('''
     .stButton>button:hover {
         border: 1px solid #000000 !important;
     }
-    # .st-bq {
+    # .st-c8 {
     #     height: 80px;
     #     line-height: 60px;
     #     padding: 1px;
