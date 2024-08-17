@@ -1,5 +1,5 @@
 # Import libraries
-import asyncio
+import asyncio  # run async programs in parallel
 import json
 
 from dotenv import load_dotenv  # loading env variables from .env file
