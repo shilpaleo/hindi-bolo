@@ -46,6 +46,9 @@ st.markdown('''
     h1 {
     color: black;
     }
+    h3 {
+    color: black;
+    }
     div {
         font-size: 20px !important;
     }
